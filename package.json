@@ -1,0 +1,12 @@
+{
+  "name": "wharf",
+  "version": "0.0.1",
+  "description": "Tool for generating Node module documentation",
+  "preferGlobal": true,
+  "bin": {
+    "wharf": "./bin/wharf.js"
+  },
+  "dependencies": {
+    "minimist": "~1.1.1"
+  }
+}
