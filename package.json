@@ -1,6 +1,6 @@
 {
     "name": "wharf",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Tool for generating Node module documentation",
     "preferGlobal": true,
     "bin": {
