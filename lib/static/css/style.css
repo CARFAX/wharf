@@ -1,9 +1,18 @@
-.page-title {
+.project-title {
   display: block;
   color: #007fb2;
 }
-.page-title-author {
+.project-author {
   display: block;
   font-size: 2rem;
   color: #007fb2;
+}
+main {
+  padding-top: 122px;
+}
+.top-nav {
+  position: fixed;
+  background-color: #007fb2;
+  z-index: 900;
+  width: calc(100% - 240px);
 }
