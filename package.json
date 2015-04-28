@@ -1,14 +1,22 @@
 {
-    "name": "wharf",
-    "version": "0.1.0",
-    "description": "Tool for generating Node module documentation",
-    "preferGlobal": true,
-    "bin": {
-        "wharf": "./bin/wharf.js"
-    },
-    "dependencies": {
-        "minimist": "~1.1.1",
-        "marked": "^0.3.3",
-        "mb-strings": "^0.2.2"
-    }
+  "name": "wharf",
+  "version": "0.1.0",
+  "description": "Tool for generating Node module documentation",
+  "preferGlobal": true,
+  "bin": {
+    "wharf": "./bin/wharf.js"
+  },
+  "dependencies": {
+    "minimist": "~1.1.1",
+    "marked": "^0.3.3",
+    "mb-strings": "^0.2.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.0.1",
+    "gulp-uglify": "^1.2.0"
+  }
 }

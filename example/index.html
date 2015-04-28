@@ -3,14 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>cfx-js | CARFAX</title>
-    <link rel="stylesheet" href="docs/bower_components/materialize/dist/css/materialize.min.css">
-    <link rel="stylesheet" href="docs/css/gh-pages-material.css">
-    <link rel="stylesheet" href="docs/css/base.css">
-    <link rel="stylesheet" href="docs/css/style.css">
-    <link rel="stylesheet" href="docs/css/cabinet.css">
-    <link rel="stylesheet" href="docs/highlight/styles/hybrid.css">
-    <script src="docs/highlight/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="docs/css/wharf.min.css">
 </head>
 <body>
     <header>
@@ -30,7 +23,7 @@
                 </h1>
             </li>
             <li class="no-padding">
-                <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+                <ul class="collapsible collapsible-accordion doc-nav" data-collapsible="accordion">
                     <li class='bold'><a class='collapsible-header waves-effect waves-teal'>cfx.arrays</a><div class='collapsible-body'><ul><li><a href='#cfx.arrays.forEach'>forEach()</a></li><li><a href='#cfx.arrays.generate'>generate()</a></li><li><a href='#cfx.arrays.remove'>remove()</a></li><li><a href='#cfx.arrays.removeAt'>removeAt()</a></li><li><a href='#cfx.arrays.removeWhere'>removeWhere()</a></li><li><a href='#cfx.arrays.simultaneous'>simultaneous()</a></li></ul></div></li><li class='bold'><a class='collapsible-header waves-effect waves-teal'>cfx.env</a><div class='collapsible-body'><ul><li><a href='#cfx.env.Level Constants'>Level Constants</a></li><li><a href='#cfx.env.ENV'>ENV</a></li><li><a href='#cfx.env.isBrowser'>isBrowser()</a></li><li><a href='#cfx.env.determine'>determine()</a></li></ul></div></li><li class='bold'><a class='collapsible-header waves-effect waves-teal'>cfx.events</a><div class='collapsible-body'><ul><li><a href='#cfx.events.on'>on()</a></li><li><a href='#cfx.events.trigger'>trigger()</a></li><li><a href='#cfx.events.Multiple listeners'>Multiple listeners</a></li></ul></div></li><li class='bold'><a class='collapsible-header waves-effect waves-teal'>cfx.objects</a><div class='collapsible-body'><ul><li><a href='#cfx.objects.clone'>clone()</a></li><li><a href='#cfx.objects.contains'>contains()</a></li><li><a href='#cfx.objects.extend'>extend()</a></li><li><a href='#cfx.objects.forEach'>forEach()</a></li><li><a href='#cfx.objects.toArray'>toArray()</a></li></ul></div></li><li class='bold'><a class='collapsible-header waves-effect waves-teal'>cfx.paths</a><div class='collapsible-body'><ul><li><a href='#cfx.paths.join'>join()</a></li><li><a href='#cfx.paths.format'>format()</a></li><li><a href='#cfx.paths.queryString'>queryString()</a></li></ul></div></li><li class='bold'><a class='collapsible-header waves-effect waves-teal'>cfx.strings</a><div class='collapsible-body'><ul><li><a href='#cfx.strings.replace'>replace()</a></li></ul></div></li><li class='bold'><a class='collapsible-header waves-effect waves-teal'>cfx.window</a><div class='collapsible-body'><ul><li><a href='#cfx.window.domain'>domain</a></li><li><a href='#cfx.window.path'>path</a></li><li><a href='#cfx.window.redirect'>redirect()</a></li></ul></div></li>
                 </ul>
             </li>
@@ -41,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col s12 m12 l12">
-                    <a class='btn src' target='_blank' href='docs/src/cfx.html'>Source</a><h2 class='object-header' id='cfx'>cfx</h2><p>This library can be installed via bower, for browser use</p>
+                    <h2 class='object-header' id='cfx'>cfx</h2><p>This library can be installed via bower, for browser use</p>
 <pre><code class='javascript'>bower install cfx-js</code></pre><p>And npm, for use in Node applications, or with Browserify</p>
 <pre><code class='javascript'>npm install cfx-js</code></pre><p>To include the code, either</p>
 <pre><code class='javascript'>var cfx = require('cfx-js')</code></pre><p>or</p>
@@ -256,9 +249,8 @@ it('test.domain.com', function() {
         </section>
     </div>
 
-    <script src="docs/js/cabinet.js"></script>
-    <script src="docs/js/scroll-title.js"></script>
-    <script src="docs/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="docs/bower_components/materialize/dist/js/materialize.min.js"></script>
+    <script src="docs/js/highlight.pack.js"></script>
+    <script src="docs/js/wharf.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
