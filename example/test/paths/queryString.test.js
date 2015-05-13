@@ -6,7 +6,7 @@ describe('paths', function() {
                 foo: 'bar'
             };
 
-            var string = cfx.paths.queryString(params);
+            var string = fu.paths.queryString(params);
 
             expect(string).toBe('?foo=bar');
         });
@@ -18,7 +18,7 @@ describe('paths', function() {
                 num: 2
             };
 
-            var string = cfx.paths.queryString(params);
+            var string = fu.paths.queryString(params);
 
             expect(string).toBe('?foo=bar&fizz=buzz&num=2');
         });

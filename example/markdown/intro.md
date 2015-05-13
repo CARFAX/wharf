@@ -1,21 +1,21 @@
-# cfx
+# fu
 
 This library can be installed via bower, for browser use
 
-    bower install cfx-js
+    bower install fu-js
 
 And npm, for use in Node applications, or with Browserify
 
-    npm install cfx-js
+    npm install fu-js
 
 To include the code, either
 
-    var cfx = require('cfx-js')
+    var fu = require('fu-js')
 
 or
 
 ```html
-<script src='bower_components/cfx-js/dist/cfx.js'></script>
+<script src='bower_components/fu-js/dist/fu.js'></script>
 ```
 
-From that point on, everything in this library will be accessible via the cfx object.
+From that point on, everything in this library will be accessible via the fu object.

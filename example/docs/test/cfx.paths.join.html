@@ -20,7 +20,7 @@
             var leading = 'leading/',
                 trailing = 'trailing/';
 
-            var result = cfx.paths.join(leading, trailing);
+            var result = fu.paths.join(leading, trailing);
 
             expect(result).toEqual(leading + trailing);
         });
@@ -30,7 +30,7 @@
                 middle = '/middle',
                 trailing = '/trailing';
 
-            var result = cfx.paths.join(leading, middle, trailing);
+            var result = fu.paths.join(leading, middle, trailing);
 
             expect(result).toEqual(leading + middle + trailing);
         });
@@ -40,7 +40,7 @@
                 middle = '/middle',
                 trailing = '/trailing';
 
-            var result = cfx.paths.join(leading + '/', middle + '/', trailing);
+            var result = fu.paths.join(leading + '/', middle + '/', trailing);
 
             expect(result).toEqual(leading + middle + trailing);
         });

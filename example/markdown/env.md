@@ -1,4 +1,4 @@
-# cfx.env
+# fu.env
 
 A collection of constants and functions to help determine the environment.
 
@@ -6,19 +6,19 @@ A collection of constants and functions to help determine the environment.
 
 A handful of Constants to help describe environments.
 
-    cfx.env.LOCAL = 'local'
-    cfx.env.DEV = 'dev'
-    cfx.env.ALPHA = 'alpha'
-    cfx.env.BETA = 'beta'
-    cfx.env.PROD = 'prod'
+    fu.env.LOCAL = 'local'
+    fu.env.DEV = 'dev'
+    fu.env.ALPHA = 'alpha'
+    fu.env.BETA = 'beta'
+    fu.env.PROD = 'prod'
     
 ## ENV
 
-A 'final' value  that describes the current environment. Set at initialization, and when `cfx.env.determine()` is called.
+A 'final' value  that describes the current environment. Set at initialization, and when `fu.env.determine()` is called.
 
-If code is running on in a local development environment, `cfx.env.ENV` will equal `cfx.env.LOCAL`.
+If code is running on in a local development environment, `fu.env.ENV` will equal `fu.env.LOCAL`.
 
-In production, `cfx.env.ENV` will equal `cfx.env.PROD`, etc.
+In production, `fu.env.ENV` will equal `fu.env.PROD`, etc.
 
 ## isBrowser()
 
@@ -28,4 +28,4 @@ Though normally not available in the browser, `process.env` is brought to you by
 
 ## determine()
 
-Returns the current environment (`cfx.env.LOCAL`, `cfx.env.BETA`, etc.). Will also set `cfx.env.ENV` to this value.
+Returns the current environment (`fu.env.LOCAL`, `fu.env.BETA`, etc.). Will also set `fu.env.ENV` to this value.

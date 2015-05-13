@@ -3,7 +3,7 @@ describe('objects', function() {
         it('should add the given properties', function () {
             var a = { foo: 'bar', bar: 'foo' };
 
-            var b = cfx.objects.extend(a, {
+            var b = fu.objects.extend(a, {
                 derp: 'herp'
             });
 
@@ -15,7 +15,7 @@ describe('objects', function() {
         it('should clone the original', function () {
             var a = { foo: 'bar', bar: 'foo' };
 
-            var b = cfx.objects.extend(a, {
+            var b = fu.objects.extend(a, {
                 derp: 'herp'
             });
             a.foo = 'a.foo';
@@ -29,7 +29,7 @@ describe('objects', function() {
         it('should modify the original', function () {
             var a = { foo: 'bar', bar: 'foo' };
 
-            cfx.objects.extend(a, {
+            fu.objects.extend(a, {
                 derp: 'herp'
             }, true);
 
@@ -39,7 +39,7 @@ describe('objects', function() {
         it('should use {} as a default for b', function () {
             var a = { foo: 'bar', bar: 'foo' };
 
-            var b = cfx.objects.extend(a);
+            var b = fu.objects.extend(a);
 
             expect(a).toEqual(b);
         });

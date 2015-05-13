@@ -3,7 +3,7 @@ describe('arrays', function() {
         it('should remove an index', function () {
             var a = ['a', 'b', 'c', 'd', 'e'];
 
-            var b = cfx.arrays.removeAt(a, 2);
+            var b = fu.arrays.removeAt(a, 2);
 
             expect(b).toEqual(['a', 'b', 'd', 'e']);
         });
@@ -11,7 +11,7 @@ describe('arrays', function() {
         it('should not modify the original array', function () {
             var a = ['a', 'b', 'c', 'd', 'e'];
 
-            var b = cfx.arrays.removeAt(a, 2);
+            var b = fu.arrays.removeAt(a, 2);
 
             expect(a).toEqual(['a', 'b', 'c', 'd', 'e']);
         });

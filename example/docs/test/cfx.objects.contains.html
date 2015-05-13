@@ -18,7 +18,7 @@
         it('b should should contain a', function () {
             var a = { foo: 'bar', bar: 'foo' };
 
-            var result = cfx.objects.contains(a, { foo: 'bar' });
+            var result = fu.objects.contains(a, { foo: 'bar' });
 
             expect(result).toBe(true);
         });
@@ -26,7 +26,7 @@
         it('b should NOT should contain a', function () {
             var a = { foo: 'bar' };
 
-            var result = cfx.objects.contains(a, { foo: 'bar', bar: 'foo' });
+            var result = fu.objects.contains(a, { foo: 'bar', bar: 'foo' });
 
             expect(result).toBe(false);
         });
@@ -40,7 +40,7 @@
                 }
             };
 
-            var result = cfx.objects.contains(a, {
+            var result = fu.objects.contains(a, {
                 bar: {
                     a: 1,
                     b: 2

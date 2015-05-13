@@ -1,4 +1,4 @@
-# cfx.objects
+# fu.objects
 
 A collection of methods to handle objects.
 
@@ -10,7 +10,7 @@ Works on primitives, objects, and arrays (Date, RegExp, and other exotic structu
 
     var a = { foo: 'bar', bar: 'foo' }
     
-    var b = cfx.objects.clone(a)
+    var b = fu.objects.clone(a)
     
     a.foo = 'foobar'
     
@@ -21,13 +21,13 @@ Works on primitives, objects, and arrays (Date, RegExp, and other exotic structu
 
 Checks whether or not an object contains the specified key-value pairs.
 
-    cfx.objects.contains({ foo: 'bar', bar: 'foo' }, { foo: 'bar' })
+    fu.objects.contains({ foo: 'bar', bar: 'foo' }, { foo: 'bar' })
     >> true
     
-    cfx.objects.contains({ bar: 'foo' }, { foo: 'bar' }) // missing key
+    fu.objects.contains({ bar: 'foo' }, { foo: 'bar' }) // missing key
     >> false 
     
-    cfx.objects.contains({ bar: 'foo' }, { bar: 'bar' }) // value doesn't match
+    fu.objects.contains({ bar: 'foo' }, { bar: 'bar' }) // value doesn't match
     >> false
      
 ### Nested tests
@@ -39,7 +39,7 @@ This method will work on nested objects
         bar: { a: 1, b: 2 }
     }
 
-    cfx.objects.contains(a, { 
+    fu.objects.contains(a, { 
         bar: { a: 1 } 
     })
     >> true
@@ -48,7 +48,7 @@ This method will work on nested objects
 
 Creates a new object from the values of `a`, and extends/overwrites with values of`b`.
 
-    cfx.objects.extend({ foo: 'bar', bar: 'foo' }, {
+    fu.objects.extend({ foo: 'bar', bar: 'foo' }, {
         derp: 'herp',
         foo: 'fiz'
     })
@@ -57,7 +57,7 @@ Creates a new object from the values of `a`, and extends/overwrites with values 
 If `modify` is true, the original object will be modified, *NOT* cloned. Useful for modified passed arguments.
 
     var fn = function(obj, val) {
-        cfx.objects.extend(obj, { foo: val }, true)
+        fu.objects.extend(obj, { foo: val }, true)
     }
     
     var a = { foo: 'bar' }
@@ -71,7 +71,7 @@ If `modify` is true, the original object will be modified, *NOT* cloned. Useful 
 
 Loops over every key-value pair in the object, calling the given callback with `(value, key, obj)`
     
-    cfx.objects.forEach({ a: 'foo', b: 'bar', c: 'fiz'}, function(value, key, obj) {
+    fu.objects.forEach({ a: 'foo', b: 'bar', c: 'fiz'}, function(value, key, obj) {
         console.log(value, key)
     });
     
@@ -88,5 +88,5 @@ Creates an array from each value in the object.
         b: { fiz: 'buz' }
     }
     
-    cfx.objects.toArray(obj)
+    fu.objects.toArray(obj)
     >> [{foo: 'bar'}, {fiz: 'buz'}]

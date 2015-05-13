@@ -1,64 +1,64 @@
 describe('env', function() {
     describe('isBrowser()', function() {
         it('should return false', function() {
-            expect( cfx.env.isBrowser() ).toBe(true);
+            expect( fu.env.isBrowser() ).toBe(true);
         });
     });
 
     describe('determine()', function() {
         afterEach(function() {
-            cfx.window.domain = 'localhost';
+            fu.window.domain = 'localhost';
         });
 
         describe('local', function() {
             afterEach(function() {
-                cfx.env.determine();
-                expect( cfx.env.ENV ).toEqual(cfx.env.LOCAL);
+                fu.env.determine();
+                expect( fu.env.ENV ).toEqual(fu.env.LOCAL);
             });
 
             it('localhost', function() {
-                cfx.window.domain = 'localhost';
+                fu.window.domain = 'localhost';
             });
 
             it('my.carfax.com', function() {
-                cfx.window.domain = 'my.carfax.com';
+                fu.window.domain = 'my.carfax.com';
             });
 
             it('mysecure.carfax.com', function() {
-                cfx.window.domain = 'mysecure.carfax.com';
+                fu.window.domain = 'mysecure.carfax.com';
             });
 
             it('mysecured.carfax.com', function() {
-                cfx.window.domain = 'mysecured.carfax.com';
+                fu.window.domain = 'mysecured.carfax.com';
             });
         });
 
         it('should return dev', function() {
-            cfx.window.domain = 'dev.carfax.com';
-            cfx.env.determine();
+            fu.window.domain = 'dev.carfax.com';
+            fu.env.determine();
 
-            expect( cfx.env.ENV ).toEqual(cfx.env.DEV);
+            expect( fu.env.ENV ).toEqual(fu.env.DEV);
         });
 
         it('should return alpha', function() {
-            cfx.window.domain = 'alpha.carfax.com';
-            cfx.env.determine();
+            fu.window.domain = 'alpha.carfax.com';
+            fu.env.determine();
 
-            expect( cfx.env.ENV ).toEqual(cfx.env.ALPHA);
+            expect( fu.env.ENV ).toEqual(fu.env.ALPHA);
         });
 
         it('should return beta', function() {
-            cfx.window.domain = 'beta.carfax.com';
-            cfx.env.determine();
+            fu.window.domain = 'beta.carfax.com';
+            fu.env.determine();
 
-            expect( cfx.env.ENV ).toEqual(cfx.env.BETA);
+            expect( fu.env.ENV ).toEqual(fu.env.BETA);
         });
 
         it('should return prod', function() {
-            cfx.window.domain = 'carfax.com';
-            cfx.env.determine();
+            fu.window.domain = 'carfax.com';
+            fu.env.determine();
 
-            expect( cfx.env.ENV ).toEqual(cfx.env.PROD);
+            expect( fu.env.ENV ).toEqual(fu.env.PROD);
         });
     });
 });

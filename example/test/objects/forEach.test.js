@@ -9,7 +9,7 @@ describe('objects', function() {
                 e: 'ee'
             };
 
-            cfx.objects.forEach(a, function(elem, k) {
+            fu.objects.forEach(a, function(elem, k) {
                 expect(elem).toEqual(k + k);
             });
         });

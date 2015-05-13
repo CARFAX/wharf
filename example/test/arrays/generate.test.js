@@ -1,9 +1,9 @@
 describe('arrays', function() {
     describe('generate', function() {
         it('should create an array of the given size', function () {
-            var array = cfx.arrays.generate(10);
+            var array = fu.arrays.generate(10);
 
-            cfx.arrays.forEach(array, function(elem, i) {
+            fu.arrays.forEach(array, function(elem, i) {
                 expect(elem).toEqual(undefined);
             });
         });
@@ -13,9 +13,9 @@ describe('arrays', function() {
                 foo: 'bar'
             };
 
-            var array = cfx.arrays.generate(10, value);
+            var array = fu.arrays.generate(10, value);
 
-            cfx.arrays.forEach(array, function(elem, i) {
+            fu.arrays.forEach(array, function(elem, i) {
                 expect(elem).toEqual(value);
             });
         });
@@ -25,10 +25,10 @@ describe('arrays', function() {
                 foo: 'bar'
             };
 
-            var array = cfx.arrays.generate(10, value);
+            var array = fu.arrays.generate(10, value);
             value.foo = 'foo';
 
-            cfx.arrays.forEach(array, function(elem, i) {
+            fu.arrays.forEach(array, function(elem, i) {
                 expect(elem.foo).toEqual('bar');
             });
         });
@@ -38,9 +38,9 @@ describe('arrays', function() {
                 return 'index'+i;
             };
 
-            var array = cfx.arrays.generate(10, value);
+            var array = fu.arrays.generate(10, value);
 
-            cfx.arrays.forEach(array, function(elem, i) {
+            fu.arrays.forEach(array, function(elem, i) {
                 expect(elem).toEqual('index'+i);
             });
         });

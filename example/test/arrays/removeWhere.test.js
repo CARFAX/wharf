@@ -3,7 +3,7 @@ describe('arrays', function() {
         it('should remove all elements that match the filter', function () {
             var a = [1, 2, 3, 4, 5, 6];
 
-            var b = cfx.arrays.removeWhere(a, function(element, i, arr) {
+            var b = fu.arrays.removeWhere(a, function(element, i, arr) {
                 return element % 2 == 0;
             });
 
@@ -13,7 +13,7 @@ describe('arrays', function() {
         it('should not modify the original array', function () {
             var a = [1, 2, 3, 4, 5, 6];
 
-            var b = cfx.arrays.removeWhere(a, function(element, i, arr) {
+            var b = fu.arrays.removeWhere(a, function(element, i, arr) {
                 return element % 2 == 0;
             });
 

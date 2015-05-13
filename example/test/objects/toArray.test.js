@@ -6,7 +6,7 @@ describe('objects', function() {
                 b: { foo: '123', bar: '456' }
             };
 
-            var result = cfx.objects.toArray(obj);
+            var result = fu.objects.toArray(obj);
 
             expect(result).toEqual([obj.a, obj.b]);
         });

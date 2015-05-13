@@ -3,7 +3,7 @@ describe('objects', function() {
         it('a should not equal b', function () {
             var a = { foo: 'bar', bar: 'foo' };
 
-            var b = cfx.objects.clone(a);
+            var b = fu.objects.clone(a);
 
             expect(a).not.toBe(b);
             expect(a).toEqual(b);
@@ -12,7 +12,7 @@ describe('objects', function() {
         it('a should not modify b', function () {
             var a = { foo: 'bar', bar: 'foo' };
 
-            var b = cfx.objects.clone(a);
+            var b = fu.objects.clone(a);
             a.foo = 'foobar';
 
             expect(a.foo).toEqual('foobar');
@@ -22,7 +22,7 @@ describe('objects', function() {
         it('should clone an array', function () {
             var a = [1,2,3];
 
-            var b = cfx.objects.clone(a);
+            var b = fu.objects.clone(a);
             a[1] = 'two';
 
             expect(a[1]).toEqual('two');
@@ -32,7 +32,7 @@ describe('objects', function() {
         it('should not fail on a boolean', function () {
             var a = false;
 
-            var b = cfx.objects.clone(a);
+            var b = fu.objects.clone(a);
 
             expect(a).toEqual(false);
             expect(b).toEqual(false);
@@ -41,7 +41,7 @@ describe('objects', function() {
         it('should not fail on a string', function () {
             var a = 'a string';
 
-            var b = cfx.objects.clone(a);
+            var b = fu.objects.clone(a);
             a = 'not a string...';
 
             expect(a).toEqual('not a string...');
@@ -51,7 +51,7 @@ describe('objects', function() {
         it('should fail on undefined', function () {
             var a = undefined;
 
-            var b = cfx.objects.clone(a);
+            var b = fu.objects.clone(a);
             a = 123;
 
             expect(a).toEqual(123);
@@ -61,7 +61,7 @@ describe('objects', function() {
         it('should fail on null', function () {
             var a = null;
 
-            var b = cfx.objects.clone(a);
+            var b = fu.objects.clone(a);
             a = 123;
 
             expect(a).toEqual(123);
@@ -73,7 +73,7 @@ describe('objects', function() {
                 return 'b';
             };
 
-            var b = cfx.objects.clone(a);
+            var b = fu.objects.clone(a);
             a = function() {
                 return 'a';
             };

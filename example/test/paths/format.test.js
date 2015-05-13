@@ -5,7 +5,7 @@ describe('paths', function() {
             it('should replace path params with actual values', function () {
                 var string = '/api/:resource';
 
-                string = cfx.paths.format(string, 'cars');
+                string = fu.paths.format(string, 'cars');
 
                 expect(string).toBe('/api/cars');
             });
@@ -13,7 +13,7 @@ describe('paths', function() {
             it('should replace path params with actual values', function () {
                 var string = '/api/:resource/:id/:subresource';
 
-                string = cfx.paths.format(string, {
+                string = fu.paths.format(string, {
                     resource: 'cars',
                     id: 123,
                     subresource: 'wheels'
@@ -27,7 +27,7 @@ describe('paths', function() {
             it('should replace optional path params if values are provided', function () {
                 var string = '/api/:resource/:id?/:subresource?';
 
-                string = cfx.paths.format(string, 'cars', 123, 'wheels');
+                string = fu.paths.format(string, 'cars', 123, 'wheels');
 
                 expect(string).toBe('/api/cars/123/wheels');
             });
@@ -35,7 +35,7 @@ describe('paths', function() {
             it('should remove optional path params if values are not provided', function () {
                 var string = '/api/:resource/:id?/:subresource?';
 
-                string = cfx.paths.format(string, {
+                string = fu.paths.format(string, {
                     resource: 'cars'
                 });
 
@@ -47,7 +47,7 @@ describe('paths', function() {
             it('should remove trailing slashes', function () {
                 var string = '/api/:resource/:id?/:subresource/';
 
-                string = cfx.paths.format(string, {
+                string = fu.paths.format(string, {
                     resource: 'cars',
                     subresource: 'wheels'
                 });
@@ -58,7 +58,7 @@ describe('paths', function() {
             it('should normalize the path', function () {
                 var string = '//api\\:resource/:id?/:subresource?';
 
-                string = cfx.paths.format(string, 'cars');
+                string = fu.paths.format(string, 'cars');
 
                 expect(string).toBe('/api/cars');
             });
