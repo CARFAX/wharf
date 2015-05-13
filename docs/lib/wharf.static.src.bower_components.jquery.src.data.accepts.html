@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>wharf.static.src.bower_components.jquery.src.data.accepts | wharf | CARFAX</title>
+    <link rel="stylesheet" href="../css/wharf.min.css">
+    <link rel="stylesheet" href="../css/wharf.src.min.css">
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <h1>wharf.static.src.bower_components.jquery.src.data.accepts - Source</h1>
+    
+    <article>
+        
+        <pre><code class="javascript">define([
+	"../core"
+], function( jQuery ) {
+
+/**
+ * Determines whether an object can have data
+ */
+jQuery.acceptData = function( owner ) {
+	// Accepts only:
+	//  - Node
+	//    - Node.ELEMENT_NODE
+	//    - Node.DOCUMENT_NODE
+	//  - Object
+	//    - Any
+	/* jshint -W018 */
+	return owner.nodeType === 1 || owner.nodeType === 9 || !( +owner.nodeType );
+};
+
+return jQuery.acceptData;
+});
+</code></pre>
+        
+    </article>
+</body>
+</html>

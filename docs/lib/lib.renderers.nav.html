@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>lib.renderers.nav | lib-js | CARFAX</title>
+    <link rel="stylesheet" href="../css/wharf.min.css">
+    <link rel="stylesheet" href="../css/wharf.src.min.css">
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <h1>lib.renderers.nav - Source</h1>
+    
+    <article>
+        
+        <pre><code class="javascript">var fs = require('fs'),
+    format = require('mb-strings');
+
+module.exports = function render(tree) {
+    var html = '';
+
+    for(var h1 in tree) {
+        html += "<li class='bold'>";
+        html += format("<a class='collapsible-header waves-effect waves-teal'>{text}</a>", { text: h1 });
+        html += "<div class='collapsible-body'>";
+        html += "<ul>";
+
+        var h2s = tree[h1];
+        for(var h2 in h2s) {
+            var anchor = '#' + h1 + '.' + h2,
+                heading = h2s[h2];
+            html += format("<li>");
+            html += format("<a href='{anchor}'>{heading}</a>", { anchor: anchor, heading: heading });
+            html += format("</li>");
+        }
+
+        html += "</ul>";
+        html += "</div>";
+        html += "</li>";
+    }
+
+    return html;
+};</code></pre>
+        
+    </article>
+</body>
+</html>
