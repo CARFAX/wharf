@@ -1,23 +1,36 @@
 {
-  "name": "wharf",
-  "version": "0.1.0",
-  "description": "Generates interactive documentation from markdown files. Discovers and displays source and test files in Node projects.",
-  "preferGlobal": true,
-  "bin": {
-    "wharf": "./bin/wharf.js"
-  },
-  "dependencies": {
-    "browserify": "^10.2.0",
-    "marked": "^0.3.3",
-    "mb-strings": "^0.2.2",
-    "minimist": "~1.1.1"
-  },
-  "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-concat": "^2.5.2",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-rename": "^1.2.2",
-    "gulp-stylus": "^2.0.1",
-    "gulp-uglify": "^1.2.0"
-  }
+    "name": "wharf",
+    "version": "0.1.0",
+    "description": "Generates interactive documentation from markdown files. Discovers and displays source and test files in Node projects.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/CARFAX/cfx-js.git"
+    },
+    "author": "CARFAX <opensource@carfax.com>",
+    "license": "MIT",
+    "keywords": [
+        "carfax",
+        "wharf",
+        "javascript",
+        "documentation",
+        "module"
+    ],
+    "preferGlobal": true,
+    "bin": {
+        "wharf": "./bin/wharf.js"
+    },
+    "dependencies": {
+        "browserify": "^10.2.0",
+        "marked": "^0.3.3",
+        "mb-strings": "^0.2.2",
+        "minimist": "~1.1.1"
+    },
+    "devDependencies": {
+        "gulp": "^3.8.11",
+        "gulp-concat": "^2.5.2",
+        "gulp-cssmin": "^0.1.7",
+        "gulp-rename": "^1.2.2",
+        "gulp-stylus": "^2.0.1",
+        "gulp-uglify": "^1.2.0"
+    }
 }
