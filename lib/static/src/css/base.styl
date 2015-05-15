@@ -26,19 +26,29 @@ pre code
     padding 0.5em
     background #f2f2f2
 
-.object-header
-    margin-top 1.5em
-    color #007fb2
 
-.object-header + p
-    margin-bottom 2em
+.header-container
 
-.member-header
-    margin-top 1.5em
+    .object-header
+        margin-top 1.5em
+        color #007fb2
 
-.btn
-    &.test, &.src
-        float right
-        font-size 12px
-        margin-top 55px
-        margin-left .5em
+    .object-header + p
+        margin-bottom 2em
+
+    .member-header
+        margin-top 1.5em
+
+    .btn
+        &.test, &.src
+            float right
+            font-size 12px
+            margin-left .5em
+    &.h2
+        .btn
+            &.test, &.src
+                margin-top 11px
+    &.h3
+        .btn
+            &.test, &.src
+                margin-top 5px

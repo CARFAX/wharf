@@ -34,35 +34,35 @@
         <div class="container">
             <div class="row">
                 <div class="col s12 m12 l12">
-                    <h2 class='object-header' id='fu'>fu</h2><p>This library can be installed via bower, for browser use</p>
+                    <div class='header-container h2'><h2 class='object-header' id='fu'>fu</h2></div><p>This library can be installed via bower, for browser use</p>
 <pre><code class='javascript'>bower install fu-js</code></pre><p>And npm, for use in Node applications, or with Browserify</p>
 <pre><code class='javascript'>npm install fu-js</code></pre><p>To include the code, either</p>
 <pre><code class='javascript'>var fu = require('fu-js')</code></pre><p>or</p>
 <pre><code class='html'>&lt;script src='bower_components/fu-js/dist/fu.js'&gt;&lt;/script&gt;</code></pre><p>From that point on, everything in this library will be accessible via the fu object.</p>
-<a class='btn src' target='_blank' href='docs/src/fu.arrays.html'>Source</a><h2 class='object-header' id='fu.arrays'>fu.arrays</h2><p>A collection of methods to handle arrays.</p>
-<a class='btn src' target='_blank' href='docs/src/fu.arrays.forEach.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.forEach.html'>Tests</a><a class='anchor' name='fu.arrays.forEach' href='#'></a><h3 class='member-header' id='fu.arrays.forEach'>forEach(array, callback)</h3><p>Loops over every item in an array, calling the given callback with <code>(value, index, array)</code></p>
+<div class='header-container h2'><a class='btn src' target='_blank' href='docs/src/fu.arrays.html'>Source</a><h2 class='object-header' id='fu.arrays'>fu.arrays</h2></div><p>A collection of methods to handle arrays.</p>
+<div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.arrays.forEach.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.forEach.html'>Tests</a><a class='anchor' name='fu.arrays.forEach' href='#'></a><h3 class='member-header' id='fu.arrays.forEach'>forEach(array, callback)</h3></div><p>Loops over every item in an array, calling the given callback with <code>(value, index, array)</code></p>
 <pre><code class='javascript'>fu.arrays.forEach(['a', 'b', 'c'], function(value, i, array) {
     console.log(value, i)
 });
 
 &gt;&gt; 'a', 0
 &gt;&gt; 'b', 1
-&gt;&gt; 'c', 2</code></pre><a class='btn src' target='_blank' href='docs/src/fu.arrays.generate.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.generate.html'>Tests</a><a class='anchor' name='fu.arrays.generate' href='#'></a><h3 class='member-header' id='fu.arrays.generate'>generate(count, [value])</h3><p>Generates an array of the given size. If no value is given, then each entry is <code>undefined</code></p>
+&gt;&gt; 'c', 2</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.arrays.generate.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.generate.html'>Tests</a><a class='anchor' name='fu.arrays.generate' href='#'></a><h3 class='member-header' id='fu.arrays.generate'>generate(count, [value])</h3></div><p>Generates an array of the given size. If no value is given, then each entry is <code>undefined</code></p>
 <p>If the value is NOT a function, then each entry in the array will be a cloned value (not a reference).</p>
 <pre><code class='javascript'>fu.arrays.generate(3, {foo:'bar'})
 &gt;&gt; [{foo:'bar'}, {foo:'bar'}, {foo:'bar'}]</code></pre><p>If the value IS a function, then each entry will be the return value of the function. Your value function will be called with <code>(index)</code></p>
 <pre><code class='javascript'>fu.arrays.generate(3, function(i) {
     return "index"+i
 })
-&gt;&gt; ['index0', 'index1', 'index2']</code></pre><a class='btn src' target='_blank' href='docs/src/fu.arrays.remove.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.remove.html'>Tests</a><a class='anchor' name='fu.arrays.remove' href='#'></a><h3 class='member-header' id='fu.arrays.remove'>remove(array, element)</h3><p>Removes the element from the array. Does not modify the original array, but returns a clone.</p>
+&gt;&gt; ['index0', 'index1', 'index2']</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.arrays.remove.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.remove.html'>Tests</a><a class='anchor' name='fu.arrays.remove' href='#'></a><h3 class='member-header' id='fu.arrays.remove'>remove(array, element)</h3></div><p>Removes the element from the array. Does not modify the original array, but returns a clone.</p>
 <pre><code class='javascript'>fu.arrays.remove(['a', 'b', 'c'], 'b')
-&gt;&gt; ['a', 'c']</code></pre><a class='btn src' target='_blank' href='docs/src/fu.arrays.removeAt.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.removeAt.html'>Tests</a><a class='anchor' name='fu.arrays.removeAt' href='#'></a><h3 class='member-header' id='fu.arrays.removeAt'>removeAt(array, index)</h3><p>Splices the given index out of the array. Does not modify the original array, but returns a clone.</p>
+&gt;&gt; ['a', 'c']</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.arrays.removeAt.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.removeAt.html'>Tests</a><a class='anchor' name='fu.arrays.removeAt' href='#'></a><h3 class='member-header' id='fu.arrays.removeAt'>removeAt(array, index)</h3></div><p>Splices the given index out of the array. Does not modify the original array, but returns a clone.</p>
 <pre><code class='javascript'>fu.arrays.removeAt(['a', 'b', 'c', 'd'], 1)
-&gt;&gt; ['a', 'c', 'd']</code></pre><a class='btn src' target='_blank' href='docs/src/fu.arrays.removeWhere.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.removeWhere.html'>Tests</a><a class='anchor' name='fu.arrays.removeWhere' href='#'></a><h3 class='member-header' id='fu.arrays.removeWhere'>removeWhere(array, callback)</h3><p>Removes all elements that pass the callback. The callback must return exactly (===) a true boolean value to be considered &#39;passed&#39;.</p>
+&gt;&gt; ['a', 'c', 'd']</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.arrays.removeWhere.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.removeWhere.html'>Tests</a><a class='anchor' name='fu.arrays.removeWhere' href='#'></a><h3 class='member-header' id='fu.arrays.removeWhere'>removeWhere(array, callback)</h3></div><p>Removes all elements that pass the callback. The callback must return exactly (===) a true boolean value to be considered &#39;passed&#39;.</p>
 <pre><code class='javascript'>fu.arrays.removeWhere([1, 2, 3, 4, 5, 6], function(element, i, arr) {
     return element % 2 == 0;
 });
-&gt;&gt; [1, 3, 5]</code></pre><a class='btn src' target='_blank' href='docs/src/fu.arrays.simultaneous.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.simultaneous.html'>Tests</a><a class='anchor' name='fu.arrays.simultaneous' href='#'></a><h3 class='member-header' id='fu.arrays.simultaneous'>simultaneous(arrays...)</h3><p>Iterates over a list of arrays. The callback is called with <code>(values..., index)</code> where values is the element in each array at the given index.</p>
+&gt;&gt; [1, 3, 5]</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.arrays.simultaneous.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.arrays.simultaneous.html'>Tests</a><a class='anchor' name='fu.arrays.simultaneous' href='#'></a><h3 class='member-header' id='fu.arrays.simultaneous'>simultaneous(arrays...)</h3></div><p>Iterates over a list of arrays. The callback is called with <code>(values..., index)</code> where values is the element in each array at the given index.</p>
 <pre><code class='javascript'>var array1 = [1, 2, 3], 
     array2 = ['a', 'b', 'c']
 
@@ -72,26 +72,26 @@ fu.arrays.simultaneous(array1, array2).forEach(function(element1, element2, i) {
 
 &gt;&gt; 1, 'a', 0
 &gt;&gt; 2, 'b', 1
-&gt;&gt; 3, 'c', 2</code></pre><a class='btn src' target='_blank' href='docs/src/fu.env.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.env.html'>Tests</a><h2 class='object-header' id='fu.env'>fu.env</h2><p>A collection of constants and functions to help determine the environment.</p>
-<a class='anchor' name='fu.env.Level Constants' href='#'></a><h3 class='member-header' id='fu.env.Level Constants'>Level Constants (LOCAL, ALPHA, PROD, etc.)</h3><p>A handful of Constants to help describe environments.</p>
+&gt;&gt; 3, 'c', 2</code></pre><div class='header-container h2'><a class='btn src' target='_blank' href='docs/src/fu.env.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.env.html'>Tests</a><h2 class='object-header' id='fu.env'>fu.env</h2></div><p>A collection of constants and functions to help determine the environment.</p>
+<div class='header-container h3'><a class='anchor' name='fu.env.Level Constants' href='#'></a><h3 class='member-header' id='fu.env.Level Constants'>Level Constants (LOCAL, ALPHA, PROD, etc.)</h3></div><p>A handful of Constants to help describe environments.</p>
 <pre><code class='javascript'>fu.env.LOCAL = 'local'
 fu.env.DEV = 'dev'
 fu.env.ALPHA = 'alpha'
 fu.env.BETA = 'beta'
-fu.env.PROD = 'prod'</code></pre><a class='anchor' name='fu.env.ENV' href='#'></a><h3 class='member-header' id='fu.env.ENV'>ENV</h3><p>A &#39;final&#39; value  that describes the current environment. Set at initialization, and when <code>fu.env.determine()</code> is called.</p>
+fu.env.PROD = 'prod'</code></pre><div class='header-container h3'><a class='anchor' name='fu.env.ENV' href='#'></a><h3 class='member-header' id='fu.env.ENV'>ENV</h3></div><p>A &#39;final&#39; value  that describes the current environment. Set at initialization, and when <code>fu.env.determine()</code> is called.</p>
 <p>If code is running on in a local development environment, <code>fu.env.ENV</code> will equal <code>fu.env.LOCAL</code>.</p>
 <p>In production, <code>fu.env.ENV</code> will equal <code>fu.env.PROD</code>, etc.</p>
-<a class='anchor' name='fu.env.isBrowser' href='#'></a><h3 class='member-header' id='fu.env.isBrowser'>isBrowser()</h3><p>Returns <code>true</code> if <code>process.title</code> equals <code>&#39;browser&#39;</code>, otherwise <code>false</code>.</p>
+<div class='header-container h3'><a class='anchor' name='fu.env.isBrowser' href='#'></a><h3 class='member-header' id='fu.env.isBrowser'>isBrowser()</h3></div><p>Returns <code>true</code> if <code>process.title</code> equals <code>&#39;browser&#39;</code>, otherwise <code>false</code>.</p>
 <p>Though normally not available in the browser, <code>process.env</code> is brought to you by Browserify.</p>
-<a class='anchor' name='fu.env.determine' href='#'></a><h3 class='member-header' id='fu.env.determine'>determine()</h3><p>Returns the current environment (<code>fu.env.LOCAL</code>, <code>fu.env.BETA</code>, etc.). Will also set <code>fu.env.ENV</code> to this value.</p>
-<a class='btn src' target='_blank' href='docs/src/fu.events.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.events.html'>Tests</a><h2 class='object-header' id='fu.events'>fu.events</h2><p>Allows messages to be sent and received from different otherwise unconnected parts of an application.</p>
-<a class='anchor' name='fu.events.on' href='#'></a><h3 class='member-header' id='fu.events.on'>on(name, callback)</h3><p>Registers an event listener with <code>fu.events</code>. The callback will be called with whatever values the event was triggered with.</p>
+<div class='header-container h3'><a class='anchor' name='fu.env.determine' href='#'></a><h3 class='member-header' id='fu.env.determine'>determine()</h3></div><p>Returns the current environment (<code>fu.env.LOCAL</code>, <code>fu.env.BETA</code>, etc.). Will also set <code>fu.env.ENV</code> to this value.</p>
+<div class='header-container h2'><a class='btn src' target='_blank' href='docs/src/fu.events.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.events.html'>Tests</a><h2 class='object-header' id='fu.events'>fu.events</h2></div><p>Allows messages to be sent and received from different otherwise unconnected parts of an application.</p>
+<div class='header-container h3'><a class='anchor' name='fu.events.on' href='#'></a><h3 class='member-header' id='fu.events.on'>on(name, callback)</h3></div><p>Registers an event listener with <code>fu.events</code>. The callback will be called with whatever values the event was triggered with.</p>
 <pre><code class='javascript'>fu.events.on('myEvent', function(foo, bar) {
     console.log('myEvent triggered', foo, bar)
-})</code></pre><a class='anchor' name='fu.events.trigger' href='#'></a><h3 class='member-header' id='fu.events.trigger'>trigger(name, args...)</h3><p>Triggers all listeners with the specified event name.  Passes all <code>args</code> through to the listener&#39;s callback.</p>
+})</code></pre><div class='header-container h3'><a class='anchor' name='fu.events.trigger' href='#'></a><h3 class='member-header' id='fu.events.trigger'>trigger(name, args...)</h3></div><p>Triggers all listeners with the specified event name.  Passes all <code>args</code> through to the listener&#39;s callback.</p>
 <pre><code class='javascript'>fu.events.trigger('myEvent', 'hello', 'world')
 
-&gt;&gt; 'myEvent triggered', 'hello', 'world'</code></pre><a class='anchor' name='fu.events.Multiple listeners' href='#'></a><h3 class='member-header' id='fu.events.Multiple listeners'>Multiple listeners</h3><p>You may register as many listeners as you like to the same event name. All of them will be triggered when the event is triggered.</p>
+&gt;&gt; 'myEvent triggered', 'hello', 'world'</code></pre><div class='header-container h3'><a class='anchor' name='fu.events.Multiple listeners' href='#'></a><h3 class='member-header' id='fu.events.Multiple listeners'>Multiple listeners</h3></div><p>You may register as many listeners as you like to the same event name. All of them will be triggered when the event is triggered.</p>
 <pre><code class='javascript'>fu.events.on('myEvent', function(foo, bar) {
     console.log('myEvent listener 1', foo, bar)
 })
@@ -102,8 +102,8 @@ fu.events.on('myEvent', function(foo, bar) {
 fu.events.trigger('myEvent', 'hello', 'world')
 
 &gt;&gt; 'myEvent listener 1', 'hello', 'world'
-&gt;&gt; 'myEvent listener 2', 'world', 'hello'</code></pre><a class='btn src' target='_blank' href='docs/src/fu.objects.html'>Source</a><h2 class='object-header' id='fu.objects'>fu.objects</h2><p>A collection of methods to handle objects.</p>
-<a class='btn src' target='_blank' href='docs/src/fu.objects.clone.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.clone.html'>Tests</a><a class='anchor' name='fu.objects.clone' href='#'></a><h3 class='member-header' id='fu.objects.clone'>clone(obj)</h3><p>Creates a deep clone of the object. Changing the original after creating the clone will not affect the clone, and vice-versa.</p>
+&gt;&gt; 'myEvent listener 2', 'world', 'hello'</code></pre><div class='header-container h2'><a class='btn src' target='_blank' href='docs/src/fu.objects.html'>Source</a><h2 class='object-header' id='fu.objects'>fu.objects</h2></div><p>A collection of methods to handle objects.</p>
+<div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.objects.clone.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.clone.html'>Tests</a><a class='anchor' name='fu.objects.clone' href='#'></a><h3 class='member-header' id='fu.objects.clone'>clone(obj)</h3></div><p>Creates a deep clone of the object. Changing the original after creating the clone will not affect the clone, and vice-versa.</p>
 <p>Works on primitives, objects, and arrays (Date, RegExp, and other exotic structures are not yet supported).</p>
 <pre><code class='javascript'>var a = { foo: 'bar', bar: 'foo' }
 
@@ -112,7 +112,7 @@ var b = fu.objects.clone(a)
 a.foo = 'foobar'
 
 console.log(b)
-&gt;&gt; { foo: 'bar', bar: 'foo' }</code></pre><a class='btn src' target='_blank' href='docs/src/fu.objects.contains.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.contains.html'>Tests</a><a class='anchor' name='fu.objects.contains' href='#'></a><h3 class='member-header' id='fu.objects.contains'>contains(obj, testObj)</h3><p>Checks whether or not an object contains the specified key-value pairs.</p>
+&gt;&gt; { foo: 'bar', bar: 'foo' }</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.objects.contains.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.contains.html'>Tests</a><a class='anchor' name='fu.objects.contains' href='#'></a><h3 class='member-header' id='fu.objects.contains'>contains(obj, testObj)</h3></div><p>Checks whether or not an object contains the specified key-value pairs.</p>
 <pre><code class='javascript'>fu.objects.contains({ foo: 'bar', bar: 'foo' }, { foo: 'bar' })
 &gt;&gt; true
 
@@ -120,7 +120,7 @@ fu.objects.contains({ bar: 'foo' }, { foo: 'bar' }) // missing key
 &gt;&gt; false 
 
 fu.objects.contains({ bar: 'foo' }, { bar: 'bar' }) // value doesn't match
-&gt;&gt; false</code></pre><h4  id='Nested tests'>Nested tests</h4><p>This method will work on nested objects</p>
+&gt;&gt; false</code></pre><div class='header-container h4'><h4  id='Nested tests'>Nested tests</h4></div><p>This method will work on nested objects</p>
 <pre><code class='javascript'>var a = {
     foo: 'bar',
     bar: { a: 1, b: 2 }
@@ -129,7 +129,7 @@ fu.objects.contains({ bar: 'foo' }, { bar: 'bar' }) // value doesn't match
 fu.objects.contains(a, { 
     bar: { a: 1 } 
 })
-&gt;&gt; true</code></pre><a class='btn src' target='_blank' href='docs/src/fu.objects.extend.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.extend.html'>Tests</a><a class='anchor' name='fu.objects.extend' href='#'></a><h3 class='member-header' id='fu.objects.extend'>extend(a, b, [modify])</h3><p>Creates a new object from the values of <code>a</code>, and extends/overwrites with values of<code>b</code>.</p>
+&gt;&gt; true</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.objects.extend.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.extend.html'>Tests</a><a class='anchor' name='fu.objects.extend' href='#'></a><h3 class='member-header' id='fu.objects.extend'>extend(a, b, [modify])</h3></div><p>Creates a new object from the values of <code>a</code>, and extends/overwrites with values of<code>b</code>.</p>
 <pre><code class='javascript'>fu.objects.extend({ foo: 'bar', bar: 'foo' }, {
     derp: 'herp',
     foo: 'fiz'
@@ -144,22 +144,22 @@ var a = { foo: 'bar' }
 fn(a, 'fiz')
 
 console.log(a)
-&gt;&gt; { foo: 'fiz' }</code></pre><a class='btn src' target='_blank' href='docs/src/fu.objects.forEach.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.forEach.html'>Tests</a><a class='anchor' name='fu.objects.forEach' href='#'></a><h3 class='member-header' id='fu.objects.forEach'>forEach(obj, callback)</h3><p>Loops over every key-value pair in the object, calling the given callback with <code>(value, key, obj)</code></p>
+&gt;&gt; { foo: 'fiz' }</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.objects.forEach.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.forEach.html'>Tests</a><a class='anchor' name='fu.objects.forEach' href='#'></a><h3 class='member-header' id='fu.objects.forEach'>forEach(obj, callback)</h3></div><p>Loops over every key-value pair in the object, calling the given callback with <code>(value, key, obj)</code></p>
 <pre><code class='javascript'>fu.objects.forEach({ a: 'foo', b: 'bar', c: 'fiz'}, function(value, key, obj) {
     console.log(value, key)
 });
 
 &gt;&gt; 'foo', 'a'
 &gt;&gt; 'bar', 'b'
-&gt;&gt; 'fiz', 'c'</code></pre><a class='btn src' target='_blank' href='docs/src/fu.objects.toArray.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.toArray.html'>Tests</a><a class='anchor' name='fu.objects.toArray' href='#'></a><h3 class='member-header' id='fu.objects.toArray'>toArray(obj)</h3><p>Creates an array from each value in the object.</p>
+&gt;&gt; 'fiz', 'c'</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.objects.toArray.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.objects.toArray.html'>Tests</a><a class='anchor' name='fu.objects.toArray' href='#'></a><h3 class='member-header' id='fu.objects.toArray'>toArray(obj)</h3></div><p>Creates an array from each value in the object.</p>
 <pre><code class='javascript'>var obj = {
     a: { foo: 'bar' },
     b: { fiz: 'buz' }
 }
 
 fu.objects.toArray(obj)
-&gt;&gt; [{foo: 'bar'}, {fiz: 'buz'}]</code></pre><a class='btn src' target='_blank' href='docs/src/fu.paths.html'>Source</a><h2 class='object-header' id='fu.paths'>fu.paths</h2><p>Manipulation of string paths.</p>
-<a class='btn src' target='_blank' href='docs/src/fu.paths.join.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.paths.join.html'>Tests</a><a class='anchor' name='fu.paths.join' href='#'></a><h3 class='member-header' id='fu.paths.join'>join(paths...)</h3><p>Joins any number of paths together, normalizing slashes (/ vs \), and removing duplicate slashes.</p>
+&gt;&gt; [{foo: 'bar'}, {fiz: 'buz'}]</code></pre><div class='header-container h2'><a class='btn src' target='_blank' href='docs/src/fu.paths.html'>Source</a><h2 class='object-header' id='fu.paths'>fu.paths</h2></div><p>Manipulation of string paths.</p>
+<div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.paths.join.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.paths.join.html'>Tests</a><a class='anchor' name='fu.paths.join' href='#'></a><h3 class='member-header' id='fu.paths.join'>join(paths...)</h3></div><p>Joins any number of paths together, normalizing slashes (/ vs \), and removing duplicate slashes.</p>
 <p>Does not add or remove leading or trailing slashes.</p>
 <pre><code class='javascript'>fu.paths.join('/leading', 'trailing/')
 &gt;&gt; '/leading/trailing/'
@@ -171,7 +171,7 @@ fu.paths.join('leading', 'trailing')
 <pre><code class='javascript'>fu.paths.join('le///ad//ing', 'tr//ailing')
 &gt;&gt; 'le/ad/ing/tr/ailing'</code></pre><p>Normalizes all slashes to be forward facing.</p>
 <pre><code class='javascript'>fu.paths.join('le\ad\\ing', 'tr\\\ailing')
-&gt;&gt; 'le/ad/ing/tr/ailing'</code></pre><a class='btn src' target='_blank' href='docs/src/fu.paths.format.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.paths.format.html'>Tests</a><a class='anchor' name='fu.paths.format' href='#'></a><h3 class='member-header' id='fu.paths.format'>format(path, params...)</h3><p>Formats a path with the given params. Can be passed as multiple arguments, or as an object.</p>
+&gt;&gt; 'le/ad/ing/tr/ailing'</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.paths.format.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.paths.format.html'>Tests</a><a class='anchor' name='fu.paths.format' href='#'></a><h3 class='member-header' id='fu.paths.format'>format(path, params...)</h3></div><p>Formats a path with the given params. Can be passed as multiple arguments, or as an object.</p>
 <pre><code class='javascript'>fu.paths.format('/api/:resource/:id', 'cars', 123)
 &gt;&gt; '/api/cars/123'
 
@@ -188,14 +188,14 @@ fu.paths.format('/api/:resource/:id?/:prop?', {
     id: 123,
     prop: 'wheels'
 })
-&gt;&gt; '/api/cars/123/wheels'</code></pre><a class='btn src' target='_blank' href='docs/src/fu.paths.queryString.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.paths.queryString.html'>Tests</a><a class='anchor' name='fu.paths.queryString' href='#'></a><h3 class='member-header' id='fu.paths.queryString'>queryString(values)</h3><p>Constructs a query string from an object.</p>
+&gt;&gt; '/api/cars/123/wheels'</code></pre><div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.paths.queryString.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.paths.queryString.html'>Tests</a><a class='anchor' name='fu.paths.queryString' href='#'></a><h3 class='member-header' id='fu.paths.queryString'>queryString(values)</h3></div><p>Constructs a query string from an object.</p>
 <pre><code class='javascript'>fu.paths.queryString({
     resource: 'cars',
     id: 123,
     foo: 'bar'
 })
-&gt;&gt; '?resources=cars&id=123&foo=bar'</code></pre><a class='btn src' target='_blank' href='docs/src/fu.strings.html'>Source</a><h2 class='object-header' id='fu.strings'>fu.strings</h2><p>Manipulation of strings.</p>
-<a class='btn src' target='_blank' href='docs/src/fu.strings.replace.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.strings.replace.html'>Tests</a><a class='anchor' name='fu.strings.replace' href='#'></a><h3 class='member-header' id='fu.strings.replace'>replace(string, values...)</h3><p>Interpolates values into a string, using ${KEY} as the format.</p>
+&gt;&gt; '?resources=cars&id=123&foo=bar'</code></pre><div class='header-container h2'><a class='btn src' target='_blank' href='docs/src/fu.strings.html'>Source</a><h2 class='object-header' id='fu.strings'>fu.strings</h2></div><p>Manipulation of strings.</p>
+<div class='header-container h3'><a class='btn src' target='_blank' href='docs/src/fu.strings.replace.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.strings.replace.html'>Tests</a><a class='anchor' name='fu.strings.replace' href='#'></a><h3 class='member-header' id='fu.strings.replace'>replace(string, values...)</h3></div><p>Interpolates values into a string, using ${KEY} as the format.</p>
 <p>Can be used with multiple arguments, or with an object.</p>
 <pre><code class='javascript'>fu.strings.replace('Hello ${thing}!', 'World')
 &gt;&gt; 'Hello World!'
@@ -211,7 +211,7 @@ fu.paths.format('${a} + ${a} = ${b}',
     a: 2,
     b: 4
 })
-&gt;&gt; '2 + 2 = 4'</code></pre><h4  id='Custom Formats'>Custom Formats</h4><p>Create custom replacement functions with <code>replace.format(left, right)</code>. The strings are inserted into a <code>RegExp</code> - escape them accordingly.</p>
+&gt;&gt; '2 + 2 = 4'</code></pre><div class='header-container h4'><h4  id='Custom Formats'>Custom Formats</h4></div><p>Create custom replacement functions with <code>replace.format(left, right)</code>. The strings are inserted into a <code>RegExp</code> - escape them accordingly.</p>
 <pre><code class='javascript'>var myReplace = fu.strings.replace.format('#\\[', '\\]')
 
 myReplace('#[a] + #[a] = #[b]', 2, 4)
@@ -221,8 +221,8 @@ myReplace('#[a] + #[a] = #[b]',
     a: 2,
     b: 4
 });
-&gt;&gt; '2 + 2 = 4'</code></pre><a class='btn src' target='_blank' href='docs/src/fu.window.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.window.html'>Tests</a><h2 class='object-header' id='fu.window'>fu.window</h2><p>Polyfills for cross-browser functionality, and aliases for easy testing.</p>
-<a class='anchor' name='fu.window.domain' href='#'></a><h3 class='member-header' id='fu.window.domain'>domain</h3><p>Alias for <code>window.location.hostname</code></p>
+&gt;&gt; '2 + 2 = 4'</code></pre><div class='header-container h2'><a class='btn src' target='_blank' href='docs/src/fu.window.html'>Source</a><a class='btn test' target='_blank' href='docs/test/fu.window.html'>Tests</a><h2 class='object-header' id='fu.window'>fu.window</h2></div><p>Polyfills for cross-browser functionality, and aliases for easy testing.</p>
+<div class='header-container h3'><a class='anchor' name='fu.window.domain' href='#'></a><h3 class='member-header' id='fu.window.domain'>domain</h3></div><p>Alias for <code>window.location.hostname</code></p>
 <p>Useful for mocking the domain in tests (as changing <code>location.hostname</code> will redirect the window).</p>
 <p>Your other functions should check the alias, too, to make use of it.</p>
 <pre><code class='javascript'>function isTestServer() {
@@ -233,8 +233,8 @@ it('test.domain.com', function() {
     fu.window.domain = 'test.domain.com'
 
     expect( isTestServer() ).toEqual( true )
-});</code></pre><a class='anchor' name='fu.window.path' href='#'></a><h3 class='member-header' id='fu.window.path'>path</h3><p>Alias for <code>window.location.pathname</code>. Useful for testing, see <code>fu.window.domain</code> for a similar example.</p>
-<a class='anchor' name='fu.window.redirect' href='#'></a><h3 class='member-header' id='fu.window.redirect'>redirect(url)</h3><p>Redirects the current window to the given URL.</p>
+});</code></pre><div class='header-container h3'><a class='anchor' name='fu.window.path' href='#'></a><h3 class='member-header' id='fu.window.path'>path</h3></div><p>Alias for <code>window.location.pathname</code>. Useful for testing, see <code>fu.window.domain</code> for a similar example.</p>
+<div class='header-container h3'><a class='anchor' name='fu.window.redirect' href='#'></a><h3 class='member-header' id='fu.window.redirect'>redirect(url)</h3></div><p>Redirects the current window to the given URL.</p>
 
                 </div>
             </div>
