@@ -27,6 +27,9 @@
                     <li class='bold'><a class='collapsible-header waves-effect waves-teal'>Actions</a><div class='collapsible-body'><ul><li><a href='#Actions.Compile'>Compile</a></li></ul></div></li><li class='bold'><a class='collapsible-header waves-effect waves-teal'>Options</a><div class='collapsible-body'><ul><li><a href='#Options.base'>base</a></li><li><a href='#Options.title'>title</a></li><li><a href='#Options.author'>author</a></li><li><a href='#Options.src'>src</a></li><li><a href='#Options.tests'>tests</a></li></ul></div></li>
                 </ul>
             </li>
+            <li class="fixed-bot console-notice">
+                <p>Want to try our library?<br/>Just open your console!</p>
+            </li>
         </ul>
     </header>
 
@@ -34,12 +37,12 @@
         <div class="container">
             <div class="row">
                 <div class="col s12 m12 l12">
-                    <h2 class='object-header' id='wharf'>wharf</h2><p>Generates interactive documentation from markdown files. Discovers and displays source and test files in Node projects.</p>
+                    <div class='header-container h2'><h2 class='object-header' id='wharf'>wharf</h2></div><p>Generates interactive documentation from markdown files. Discovers and displays source and test files in Node projects.</p>
 <p>This library can be installed via npm</p>
 <pre><code class='javascript'>npm install -g wharf</code></pre><p>To include in a Node project, require the <code>wharf</code> module</p>
 <pre><code class='javascript'>var wharf = require('wharf')</code></pre><p>To use via command line, simply type</p>
-<pre><code class='javascript'>$ wharf</code></pre><h2 class='object-header' id='Actions'>Actions</h2><p>All actions cam be completed using the CLI, or using the Node client, and all actions will follow a similar pattern.</p>
-<a class='anchor' name='Actions.Compile' href='#'></a><h3 class='member-header' id='Actions.Compile'>Compile</h3><p>Generates the documentation for the specified directory.</p>
+<pre><code class='javascript'>$ wharf</code></pre><div class='header-container h2'><h2 class='object-header' id='Actions'>Actions</h2></div><p>All actions cam be completed using the CLI, or using the Node client, and all actions will follow a similar pattern.</p>
+<div class='header-container h3'><a class='anchor' name='Actions.Compile' href='#'></a><h3 class='member-header' id='Actions.Compile'>Compile</h3></div><p>Generates the documentation for the specified directory.</p>
 <pre><code class='javascript'>$ wharf compile [directory]
 
 // or
@@ -47,32 +50,32 @@
 wharf.compile({
     cwd: __dirname
 })</code></pre><p>This will dump an <code>index.html</code> file in the current directory, and create a new directory (<code>docs</code> by default) with all of the supporting files. </p>
-<h2 class='object-header' id='Options'>Options</h2><p>Any number of options that can be used with <code>wharf</code>.</p>
+<div class='header-container h2'><h2 class='object-header' id='Options'>Options</h2></div><p>Any number of options that can be used with <code>wharf</code>.</p>
 <p>Passed via <code>--name value</code> in the CLI, and with a map (<code>{ name: value }</code>) as the second parameter via the Node client.</p>
 <p>All of the examples below use the <code>compile</code> action for demonstration purposes, but all of these options may be used with any action.</p>
-<a class='anchor' name='Options.base' href='#'></a><h3 class='member-header' id='Options.base'>base</h3><p>Specifies the base object, to which all other members are attached. In our example, <code>fu</code> is the base.</p>
+<div class='header-container h3'><a class='anchor' name='Options.base' href='#'></a><h3 class='member-header' id='Options.base'>base</h3></div><p>Specifies the base object, to which all other members are attached. In our example, <code>fu</code> is the base.</p>
 <pre><code class='javascript'>$ wharf compile --base fu
 
 wharf.compile(..., {
     base: 'fu'
-})</code></pre><a class='anchor' name='Options.title' href='#'></a><h3 class='member-header' id='Options.title'>title</h3><p>Specifies the title of the project.</p>
+})</code></pre><div class='header-container h3'><a class='anchor' name='Options.title' href='#'></a><h3 class='member-header' id='Options.title'>title</h3></div><p>Specifies the title of the project.</p>
 <pre><code class='javascript'>$ wharf compile --title fu
 
 wharf.compile(..., {
     title: 'fu'
-})</code></pre><a class='anchor' name='Options.author' href='#'></a><h3 class='member-header' id='Options.author'>author</h3><p>Specifies the author of the project.</p>
+})</code></pre><div class='header-container h3'><a class='anchor' name='Options.author' href='#'></a><h3 class='member-header' id='Options.author'>author</h3></div><p>Specifies the author of the project.</p>
 <pre><code class='javascript'>$ wharf compile --author me
 
 wharf.compile(..., {
     author: 'me'
-})</code></pre><a class='anchor' name='Options.src' href='#'></a><h3 class='member-header' id='Options.src'>src</h3><p>Specifies the directory (relative to the cwd) that the source files are located.</p>
+})</code></pre><div class='header-container h3'><a class='anchor' name='Options.src' href='#'></a><h3 class='member-header' id='Options.src'>src</h3></div><p>Specifies the directory (relative to the cwd) that the source files are located.</p>
 <pre><code class='javascript'>$ wharf compile --src lib
 
 wharf.compile(..., {
     src: lib
 })</code></pre><p>So if the cwd is <code>/apps/fu</code>, then the src path is <code>/apps/fu/lib</code></p>
 <p><strong>Default:</strong> <code>src</code></p>
-<a class='anchor' name='Options.tests' href='#'></a><h3 class='member-header' id='Options.tests'>tests</h3><p>Specifies the directory (relative to the cwd) that the test files are located.</p>
+<div class='header-container h3'><a class='anchor' name='Options.tests' href='#'></a><h3 class='member-header' id='Options.tests'>tests</h3></div><p>Specifies the directory (relative to the cwd) that the test files are located.</p>
 <pre><code class='javascript'>$ wharf compile --tests tests
 
 wharf.compile(..., {
@@ -95,6 +98,8 @@ wharf.compile(..., {
 
     <script src="docs/js/highlight.pack.js"></script>
     <script src="docs/js/wharf.min.js"></script>
+    <script src="docs/js/bundle.js"></script>
+    <script>console.log("Hey there! You now have access to the 'wharf' object. Feel free to run any examples, or experiment with your own code!", wharf);</script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
