@@ -6,7 +6,7 @@ describe('objects', function() {
                 b: { foo: '123', bar: '456' }
             };
 
-            var result = fu.objects.toArray(obj);
+            var result = foo.objects.toArray(obj);
 
             expect(result).toEqual([obj.a, obj.b]);
         });

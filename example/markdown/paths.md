@@ -1,4 +1,4 @@
-# fu.paths
+# foo.paths
 
 Manipulation of string paths.
 
@@ -8,35 +8,35 @@ Joins any number of paths together, normalizing slashes (/ vs \\), and removing 
 
 Does not add or remove leading or trailing slashes.
 
-    fu.paths.join('/leading', 'trailing/')
+    foo.paths.join('/leading', 'trailing/')
     >> '/leading/trailing/'
     
-    fu.paths.join('leading', 'trailing')
+    foo.paths.join('leading', 'trailing')
     >> 'leading/trailing'
     
 Will gracefully handle slashes in the middle of strings
 
-    fu.paths.join('le/ad/ing', 'tr/ailing')
+    foo.paths.join('le/ad/ing', 'tr/ailing')
     >> 'le/ad/ing/tr/ailing'
     
 Removes duplicates.
 
-    fu.paths.join('le///ad//ing', 'tr//ailing')
+    foo.paths.join('le///ad//ing', 'tr//ailing')
     >> 'le/ad/ing/tr/ailing'
     
 Normalizes all slashes to be forward facing.
 
-    fu.paths.join('le\ad\\ing', 'tr\\\ailing')
+    foo.paths.join('le\ad\\ing', 'tr\\\ailing')
     >> 'le/ad/ing/tr/ailing'
 
 ## format(path, params...)
 
 Formats a path with the given params. Can be passed as multiple arguments, or as an object.
 
-    fu.paths.format('/api/:resource/:id', 'cars', 123)
+    foo.paths.format('/api/:resource/:id', 'cars', 123)
     >> '/api/cars/123'
 
-    fu.paths.format('/api/:resource/:id', {
+    foo.paths.format('/api/:resource/:id', {
         resource: 'cars',
         id: 123
     })
@@ -44,10 +44,10 @@ Formats a path with the given params. Can be passed as multiple arguments, or as
 
 Can be used with optional parameters. If a value is not given for the parameter, it will be removed from the path.
 
-    fu.paths.format('/api/:resource/:id?/:prop?', 'cars', 123)
+    foo.paths.format('/api/:resource/:id?/:prop?', 'cars', 123)
     >> '/api/cars/123'
 
-    fu.paths.format('/api/:resource/:id?/:prop?', {
+    foo.paths.format('/api/:resource/:id?/:prop?', {
         resource: 'cars',
         id: 123,
         prop: 'wheels'
@@ -58,7 +58,7 @@ Can be used with optional parameters. If a value is not given for the parameter,
 
 Constructs a query string from an object.
 
-    fu.paths.queryString({
+    foo.paths.queryString({
         resource: 'cars',
         id: 123,
         foo: 'bar'

@@ -1,19 +1,19 @@
 describe('window', function() {
     describe('domain', function() {
         it('should be localhost', function() {
-            expect( fu.window.domain ).toEqual('localhost');
+            expect( foo.window.domain ).toEqual('localhost');
         });
     });
 
     describe('scrollY()', function() {
         it('should return 0', function() {
-            expect( fu.window.scrollY()).toEqual(0);
+            expect( foo.window.scrollY()).toEqual(0);
         });
     });
 
     describe('path', function() {
         it('should be /context.html', function() {
-            expect( fu.window.path ).toEqual(window.location.pathname);
+            expect( foo.window.path ).toEqual(window.location.pathname);
         });
     });
 });
