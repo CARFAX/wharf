@@ -1,7 +1,7 @@
 {
   "name": "wharf",
   "version": "0.1.0",
-  "description": "Tool for generating Node module documentation",
+  "description": "Generates interactive documentation from markdown files. Discovers and displays source and test files in Node projects.",
   "preferGlobal": true,
   "bin": {
     "wharf": "./bin/wharf.js"
