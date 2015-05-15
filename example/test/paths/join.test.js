@@ -5,7 +5,7 @@ describe('paths', function() {
             var leading = 'leading/',
                 trailing = 'trailing/';
 
-            var result = fu.paths.join(leading, trailing);
+            var result = foo.paths.join(leading, trailing);
 
             expect(result).toEqual(leading + trailing);
         });
@@ -15,7 +15,7 @@ describe('paths', function() {
                 middle = '/middle',
                 trailing = '/trailing';
 
-            var result = fu.paths.join(leading, middle, trailing);
+            var result = foo.paths.join(leading, middle, trailing);
 
             expect(result).toEqual(leading + middle + trailing);
         });
@@ -25,7 +25,7 @@ describe('paths', function() {
                 middle = '/middle',
                 trailing = '/trailing';
 
-            var result = fu.paths.join(leading + '/', middle + '/', trailing);
+            var result = foo.paths.join(leading + '/', middle + '/', trailing);
 
             expect(result).toEqual(leading + middle + trailing);
         });

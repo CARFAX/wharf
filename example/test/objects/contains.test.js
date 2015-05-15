@@ -3,7 +3,7 @@ describe('objects', function() {
         it('b should should contain a', function () {
             var a = { foo: 'bar', bar: 'foo' };
 
-            var result = fu.objects.contains(a, { foo: 'bar' });
+            var result = foo.objects.contains(a, { foo: 'bar' });
 
             expect(result).toBe(true);
         });
@@ -11,7 +11,7 @@ describe('objects', function() {
         it('b should NOT should contain a', function () {
             var a = { foo: 'bar' };
 
-            var result = fu.objects.contains(a, { foo: 'bar', bar: 'foo' });
+            var result = foo.objects.contains(a, { foo: 'bar', bar: 'foo' });
 
             expect(result).toBe(false);
         });
@@ -25,7 +25,7 @@ describe('objects', function() {
                 }
             };
 
-            var result = fu.objects.contains(a, {
+            var result = foo.objects.contains(a, {
                 bar: {
                     a: 1,
                     b: 2

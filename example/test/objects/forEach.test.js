@@ -9,7 +9,7 @@ describe('objects', function() {
                 e: 'ee'
             };
 
-            fu.objects.forEach(a, function(elem, k) {
+            foo.objects.forEach(a, function(elem, k) {
                 expect(elem).toEqual(k + k);
             });
         });

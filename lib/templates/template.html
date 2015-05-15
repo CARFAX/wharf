@@ -27,6 +27,9 @@
                     {nav}
                 </ul>
             </li>
+            <li class="fixed-bot console-notice">
+                <p>Want to try our library?<br/>Just open your console!</p>
+            </li>
         </ul>
     </header>
 
@@ -50,6 +53,8 @@
 
     <script src="docs/js/highlight.pack.js"></script>
     <script src="docs/js/wharf.min.js"></script>
+    <script src="docs/js/bundle.js"></script>
+    <script>console.log("Hey there! You now have access to the '{project_base}' object. Feel free to run any examples, or experiment with your own code!", {project_base});</script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

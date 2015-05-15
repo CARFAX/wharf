@@ -1,21 +1,21 @@
-# fu
+# foo
 
 This library can be installed via bower, for browser use
 
-    bower install fu-js
+    bower install foo-js
 
 And npm, for use in Node applications, or with Browserify
 
-    npm install fu-js
+    npm install foo-js
 
 To include the code, either
 
-    var fu = require('fu-js')
+    var foo = require('foo-js')
 
 or
 
 ```html
-<script src='bower_components/fu-js/dist/fu.js'></script>
+<script src='bower_components/foo-js/dist/foo.js'></script>
 ```
 
-From that point on, everything in this library will be accessible via the fu object.
+From that point on, everything in this library will be accessible via the foo object.

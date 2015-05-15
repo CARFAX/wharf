@@ -5,7 +5,7 @@ describe('strings', function() {
             it('should replace templated indexes with corresponding argument.', function () {
                 var string = 'Hello ${0}!';
 
-                string = fu.strings.replace(string, 'World');
+                string = foo.strings.replace(string, 'World');
 
                 expect(string).toBe('Hello World!');
             });
@@ -13,7 +13,7 @@ describe('strings', function() {
             it('should replace templated indexes with corresponding arguments in multiple uses', function () {
                 var string = 'Hello ${0}! Did you know that ${1} + ${1} = ${2}?';
 
-                string = fu.strings.replace(string, 'World', 2, 4);
+                string = foo.strings.replace(string, 'World', 2, 4);
 
                 expect(string).toBe('Hello World! Did you know that 2 + 2 = 4?');
             });
@@ -21,7 +21,7 @@ describe('strings', function() {
             it('should still work with non-numeric keys', function () {
                 var string = 'Hello ${subject}! Did you know that ${a} + ${a} = ${b}?';
 
-                string = fu.strings.replace(string, 'World', 2, 4);
+                string = foo.strings.replace(string, 'World', 2, 4);
 
                 expect(string).toBe('Hello World! Did you know that 2 + 2 = 4?');
             });
@@ -32,7 +32,7 @@ describe('strings', function() {
             it('should replace templated keys with given value.', function () {
                 var string = 'Hello ${subject}!';
 
-                string = fu.strings.replace(string, {
+                string = foo.strings.replace(string, {
                     subject: 'World'
                 });
 
@@ -42,7 +42,7 @@ describe('strings', function() {
             it('should replace templated keys with given values, in multiple uses', function () {
                 var string = 'Hello ${subject}! Did you know that ${a} + ${a} = ${b}?';
 
-                string = fu.strings.replace(string, {
+                string = foo.strings.replace(string, {
                     subject: 'World',
                     a: 2,
                     b: 4
@@ -55,7 +55,7 @@ describe('strings', function() {
         describe('format()', function() {
             it('should replace templated indexes with corresponding argument.', function () {
                 var string = 'Hello #{subject}!',
-                    format = fu.strings.replace.format('#{', '}');
+                    format = foo.strings.replace.format('#{', '}');
 
                 string = format(string, {
                     subject: 'World'
@@ -66,7 +66,7 @@ describe('strings', function() {
 
             it('should replace templated indexes with corresponding arguments in multiple uses', function () {
                 var string = 'Hello #{subject}! Did you know that #{a} + #{a} = #{b}?',
-                    format = fu.strings.replace.format('#{', '}');
+                    format = foo.strings.replace.format('#{', '}');
 
                 string = format(string, 'World', 2, 4);
 
@@ -77,15 +77,15 @@ describe('strings', function() {
         describe('pattern', function() {
             it('changing this will change all executions', function () {
                 var string = 'Hello #{subject}!',
-                    original = fu.strings.replace.pattern;
-                fu.strings.replace.pattern = /#{(.+?)}/g;
+                    original = foo.strings.replace.pattern;
+                foo.strings.replace.pattern = /#{(.+?)}/g;
 
-                string = fu.strings.replace(string, {
+                string = foo.strings.replace(string, {
                     subject: 'World'
                 });
 
                 expect(string).toBe('Hello World!');
-                fu.strings.replace.pattern = original;
+                foo.strings.replace.pattern = original;
             });
         });
     });

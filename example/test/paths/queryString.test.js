@@ -6,7 +6,7 @@ describe('paths', function() {
                 foo: 'bar'
             };
 
-            var string = fu.paths.queryString(params);
+            var string = foo.paths.queryString(params);
 
             expect(string).toBe('?foo=bar');
         });
@@ -18,7 +18,7 @@ describe('paths', function() {
                 num: 2
             };
 
-            var string = fu.paths.queryString(params);
+            var string = foo.paths.queryString(params);
 
             expect(string).toBe('?foo=bar&fizz=buzz&num=2');
         });

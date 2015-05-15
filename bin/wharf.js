@@ -7,18 +7,14 @@ var minimist = require('minimist'),
     args = options._;
 delete options._;
 
-function paths(input, output) {
-    input = input || '';
-    output = output ? output : path.join(input, 'docs');  // default to input dir + '/docs'
-
+function paths(cwd) {
     return {
-        input: path.join(process.cwd(), input),
-        output: path.join(process.cwd(), output)
+        cwd: cwd || process.cwd()
     };
 }
 
 if(args[0] == 'compile') {
-    wharf.compile( paths(args[1], args[2]), options);
+    wharf.compile( paths(args[1]), options);
 } else {
     console.log('wharf - Node module documentation generator.', args, options);
 }

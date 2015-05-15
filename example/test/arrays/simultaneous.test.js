@@ -5,7 +5,7 @@ describe('arrays', function() {
             listC = [{ foo: 'bar' }, { stew: 'car' }, { too: 'far' }, { blue: 'tar'}];
 
         it('should return an object with the simultaneousMethods', function() {
-            var iterator = fu.arrays.simultaneous(listA, listB, listC);
+            var iterator = foo.arrays.simultaneous(listA, listB, listC);
 
             expect(iterator.until).toEqual(jasmine.any(Function));
             expect(iterator.forEach).toEqual(jasmine.any(Function));
@@ -14,14 +14,14 @@ describe('arrays', function() {
         describe('forEach', function() {
             it('should give the index as the last argument', function() {
                 var count = 0;
-                fu.arrays.simultaneous(listA, listB, listC).forEach(function(a, b, c, i) {
+                foo.arrays.simultaneous(listA, listB, listC).forEach(function(a, b, c, i) {
                     expect(i).toEqual(count);
                     count++;
                 });
             });
 
             it('should give the element at the current index of each array', function() {
-                fu.arrays.simultaneous(listA, listB, listC).forEach(function(a, b, c, i) {
+                foo.arrays.simultaneous(listA, listB, listC).forEach(function(a, b, c, i) {
                     expect(a).toEqual(listA[i]);
                     expect(b).toEqual(listB[i]);
                     expect(c).toEqual(listC[i]);

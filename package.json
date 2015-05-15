@@ -7,9 +7,10 @@
     "wharf": "./bin/wharf.js"
   },
   "dependencies": {
-    "minimist": "~1.1.1",
+    "browserify": "^10.2.0",
     "marked": "^0.3.3",
-    "mb-strings": "^0.2.2"
+    "mb-strings": "^0.2.2",
+    "minimist": "~1.1.1"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
